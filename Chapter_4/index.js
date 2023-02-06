@@ -2,7 +2,8 @@
 
 // const result = add(1, 3);
 // console.log("Result", result);
-const wc = require("./word-count");
+// const wc = require("./word-count");
+import { wordCount as wc } from "./word-count.js";
 const sentence = "Where there is much light, there is also shadow";
 const wordCount = wc(sentence);
 console.log(sentence);
