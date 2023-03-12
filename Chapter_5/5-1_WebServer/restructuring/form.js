@@ -25,6 +25,7 @@ export function getForm(addresses, id) {
     <body>
       <form
         action="/save"
+        enctype="multipart/form-data"
         method="POST">
         <input
           type="hidden"
@@ -70,6 +71,10 @@ export function getForm(addresses, id) {
             id="country"
             name="country"
             value="${address.country}" />
+        </div>
+        <div>
+        <label for="upload">file</label>
+        <input type="file" id="upload" name="upload" />
         </div>
         <div>
           <button type="submit">Save</button>

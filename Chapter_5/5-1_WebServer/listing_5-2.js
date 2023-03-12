@@ -1,8 +1,8 @@
 import { createServer, request } from "http";
 
 const server = createServer((request, response) => {
-  console.log(request);
-  console.log(response);
+  // console.log(request);
+  // console.log(response);
 
   response.writeHead(200, { "content-type": "text/html" });
 

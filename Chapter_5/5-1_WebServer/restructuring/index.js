@@ -5,7 +5,8 @@ import { deleteAddress } from "./delete.js";
 import { getForm } from "./form.js";
 import { getList } from "./list.js";
 import { saveAddress } from "./save.js";
-import { readFile } from "fs";
+import { readFile, rename } from "fs";
+import formidable from "formidable";
 
 let addresses = data;
 
@@ -19,15 +20,42 @@ const server = createServer((request, response) => {
   } else if (parts.includes("edit")) {
     send(response, getForm(addresses, parts[2]));
   } else if (parts.includes("save") && request.method === "POST") {
-    let body = "";
-    request.on("readable", () => {
-      const Data = request.read();
-      body += Data !== null ? Data : "";
-    });
-    request.on("end", () => {
-      const address = parse(body);
+    const form = new formidable.IncomingForm();
+    // form.parse(request, (err, address, files) => {
+    //   console.log(files.upload);
+    //   if(files.upload){
+    //     rename(files.upload.path)
+    //   }
+    // });
+    console.log(form);
+    form.parse(request, (err, address, files) => {
+      console.log("files", files.upload.filepath, files.upload.newFilename);
+
+      rename(
+        files.upload.filepath,
+        `Chapter_5/5-1_WebServer/restructuring/public/assets/${files.upload.newFilename}`,
+        () => {
+          address["files"] = `/assets/${files.upload.newFilename}`;
+          console.log(address["file"]);
+        }
+      );
+
+      // let body = "";
+      // request.on("readable", () => {
+      //   const Data = request.read();
+      //   body += Data !== null ? Data : "";
+      // });
+      // request.on("end", () => {
+      //   const address = parse(body);
       addresses = saveAddress(addresses, address);
       redirect(response, "/");
+    });
+  } else if (parts.includes("asssets")) {
+    readFile(`public${request.url.replaceAll("%20", "")}`, (err, data) => {
+      if (err) {
+        response.statusCode = 404;
+        response.end();
+      }
     });
   } else if (request.url === "/style.css") {
     readFile(
@@ -38,13 +66,11 @@ const server = createServer((request, response) => {
           response.statusCode = 404;
           response.end();
         } else {
-          console.log(data);
           response.end(data);
         }
       }
     );
   } else {
-    // console.log(addresses);
     send(response, getList(addresses));
   }
 });
