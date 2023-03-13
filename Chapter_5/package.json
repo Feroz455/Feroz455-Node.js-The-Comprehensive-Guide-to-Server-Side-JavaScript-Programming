@@ -10,5 +10,8 @@
   },
   "keywords": [],
   "author": "Firoz Mahmud",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "openssl": "^2.0.0"
+  }
 }
