@@ -1,0 +1,115 @@
+[
+    {
+      name: "John Doe",
+      age: 28,
+      fees: new mongoose.Types.Decimal128('5600.75'),
+      hobbies: [
+            "reading",
+            "cooking",
+            "traveling"
+        ],
+      isactive: true,
+      comments: [
+            { value: "Great article!", publish: new Date("2022-01-01")
+            },
+            { value: "Thanks for sharing!", publish: new Date("2022-01-02")
+            }
+        ]
+    },
+    {
+      name: "Jane Smith",
+      age: 35,
+      fees: new mongoose.Types.Decimal128('6200.50'),
+      hobbies: [
+            "painting",
+            "hiking"
+        ],
+      isactive: true,
+      comments: [
+            { value: "Nice work!", publish: new Date("2022-02-01")
+            },
+            { value: "I learned a lot.", publish: new Date("2022-02-02")
+            }
+        ]
+    },
+    {
+      name: "Bob Johnson",
+      age: 40,
+      fees: new mongoose.Types.Decimal128('7500.25'),
+      hobbies: [
+            "fishing",
+            "golfing"
+        ],
+      isactive: false,
+      comments: [
+            { value: "This was very helpful.", publish: new Date("2022-03-01")
+            },
+            { value: "Thanks for taking the time to share.", publish: new Date("2022-03-02")
+            }
+        ]
+    },
+    {
+      name: "Amy Lee",
+      age: 22,
+      fees: new mongoose.Types.Decimal128('4800.00'),
+      hobbies: [
+            "dancing",
+            "singing"
+        ],
+      isactive: true,
+      comments: [
+            { value: "I really enjoyed this.", publish: new Date("2022-04-01")
+            },
+            { value: "Can't wait to try it out myself.", publish: new Date("2022-04-02")
+            }
+        ]
+    },
+    {
+      name: "David Kim",
+      age: 32,
+      fees: new mongoose.Types.Decimal128('5800.75'),
+      hobbies: [
+            "playing soccer",
+            "running"
+        ],
+      isactive: false,
+      comments: [
+            { value: "Thanks for the tips!", publish: new Date("2022-05-01")
+            },
+            { value: "I'm going to share this with my friends.", publish: new Date("2022-05-02")
+            }
+        ]
+    },
+    {
+      name: "Linda Chen",
+      age: 25,
+      fees: new mongoose.Types.Decimal128('6500.50'),
+      hobbies: [
+            "yoga",
+            "meditation"
+        ],
+      isactive: true,
+      comments: [
+            { value: "Excellent article!", publish: new Date("2022-06-01")
+            },
+            { value: "I will definitely be bookmarking this.", publish: new Date("2022-06-02")
+            }
+        ]
+    },
+    {
+      name: "Tom Jones",
+      age: 48,
+      fees: new mongoose.Types.Decimal128('8200.25'),
+      hobbies: [
+            "reading",
+            "golfing"
+        ],
+      isactive: false,
+      comments: [
+            { value: "Thanks for sharing your expertise!", publish: new Date("2022-07-01")
+            },
+            { value: "I appreciate your insights.", publish: new Date("2022-07-02")
+            }
+        ]
+    }
+]

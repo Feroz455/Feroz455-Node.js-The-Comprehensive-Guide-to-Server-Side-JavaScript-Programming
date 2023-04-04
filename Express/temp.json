@@ -1,0 +1,99 @@
+[
+  {
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "pages": 662,
+    "genres": ["fantasy"],
+    "rating": 4.56,
+    "reviews": [
+      { "name": "John", "body": "This book is amazing!" },
+      { "name": "Sarah", "body": "One of my all-time favorites" }
+    ]
+  },
+  {
+    "title": "The Wise Man's Fear",
+    "author": "Patrick Rothfuss",
+    "pages": 994,
+    "genres": ["fantasy"],
+    "rating": 4.56,
+    "reviews": [
+      { "name": "Mark", "body": "An epic story, can't wait for the next book" },
+      { "name": "Emily", "body": "Loved it!" }
+    ]
+  },
+  {
+    "title": "The Name of the Rose",
+    "author": "Umberto Eco",
+    "pages": 536,
+    "genres": ["historical fiction", "mystery"],
+    "rating": 4.14,
+    "reviews": [
+      { "name": "Paul", "body": "A masterpiece of historical fiction" },
+      { "name": "Alice", "body": "Compelling mystery with vivid characters" }
+    ]
+  },
+  {
+    "title": "The Shadow of the Wind",
+    "author": "Carlos Ruiz Zafón",
+    "pages": 487,
+    "genres": ["mystery", "historical fiction"],
+    "rating": 4.26,
+    "reviews": [
+      { "name": "Chris", "body": "A haunting tale that will stay with you" },
+      { "name": "Julia", "body": "Beautifully written and captivating" }
+    ]
+  },
+  {
+    "title": "The Girl with the Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "pages": 672,
+    "genres": ["mystery", "thriller"],
+    "rating": 4.13,
+    "reviews": [
+      { "name": "David", "body": "Intense and suspenseful, a must-read" },
+      {
+        "name": "Michelle",
+        "body": "An intricate plot with memorable characters"
+      }
+    ]
+  },
+  {
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "pages": 489,
+    "genres": ["mystery", "thriller"],
+    "rating": 3.81,
+    "reviews": [
+      { "name": "Tom", "body": "An exciting page-turner with lots of twists" },
+      {
+        "name": "Karen",
+        "body": "A thrilling ride through history and intrigue"
+      }
+    ]
+  },
+  {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "pages": 223,
+    "genres": ["fantasy"],
+    "rating": 4.47,
+    "reviews": [
+      { "name": "Emma", "body": "A magical journey that never gets old" },
+      { "name": "Tom", "body": "The beginning of a beloved series" }
+    ]
+  },
+  {
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "pages": 374,
+    "genres": ["dystopian", "science fiction"],
+    "rating": 4.33,
+    "reviews": [
+      { "name": "Amy", "body": "A thrilling adventure with heart and soul" },
+      {
+        "name": "Alex",
+        "body": "A riveting story that keeps you on the edge of your seat"
+      }
+    ]
+  }
+]
