@@ -13,6 +13,8 @@ dotenv.config();
 const port = process.env.PORT;
 const DATABASE_URL = process.env.DATABASE_URL;
 connectDB(DATABASE_URL);
+
+app.set("view engine", "pug");
 //Global middleware
 app.use(bodyParser.json());
 app.use(
@@ -25,7 +27,9 @@ app.use("/movies", movieRouter);
 app.get("/", (request, response) => {
   response.redirect("/movies");
 });
-
+// app.get("/", (req, res) => {
+//   res.render("index", { title: "Hey", message: "Hello there!" });
+// });
 app.listen(port, () => {
   console.log(`App is running on server http://localhost:${port}`);
 });

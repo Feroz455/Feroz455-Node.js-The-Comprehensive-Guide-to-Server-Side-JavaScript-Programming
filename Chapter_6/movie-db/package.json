@@ -18,7 +18,8 @@
     "install": "^0.13.0",
     "mongoose": "^7.0.3",
     "morgan": "^1.10.0",
-    "npm": "^9.6.4"
+    "npm": "^9.6.4",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

@@ -7,9 +7,12 @@ const listAction = async (req, res, next) => {
   try {
     const data = await MovieModel.find();
     const body = render(data);
-    res.send(body);
+    // res.send(body);
+    // console.log(`${dirname(fileURLToPath(import.meta.url))}/views/list`);
+    res.render(`index`);
+    // res.render("index", { title: "Hey", message: "Hello there!" });
   } catch (error) {
-    console.log(error.massage);
+    console.log(error.massage, "From here");
   }
 };
 
