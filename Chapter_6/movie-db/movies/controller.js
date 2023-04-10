@@ -6,11 +6,14 @@ import { render } from "./views.js";
 const listAction = async (req, res, next) => {
   try {
     const data = await MovieModel.find();
+    console.log(data);
     const body = render(data);
     // res.send(body);
     // console.log(`${dirname(fileURLToPath(import.meta.url))}/views/list`);
-    res.render(`index`);
-    // res.render("index", { title: "Hey", message: "Hello there!" });
+    // res.render(`${dirname(fileURLToPath(import.meta.url))}/views/index`);
+    res.render("index", {
+      movies: data,
+    });
   } catch (error) {
     console.log(error.massage, "From here");
   }
@@ -33,8 +36,8 @@ const removeAction = async (req, res) => {
 const formAction = async (req, res, next) => {
   try {
     const data = await MovieModel.findOne({ id: req.params.id });
-    const body = FormRender(data);
-    res.send(body);
+    // const body = FormRender(data);
+    res.render("form", { movie: data });
   } catch (error) {
     console.log(error.massage);
   }

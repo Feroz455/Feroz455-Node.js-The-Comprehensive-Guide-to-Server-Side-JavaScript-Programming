@@ -1,28 +1,34 @@
-doctype html
-html 
-    head 
-        meta(charset="UTF-8")
-        title Movie list
-        link(rel="stylesheet", href="./style.css")
-    body 
-        table 
-            thead 
-                tr 
-                    th  ID 
-                    th Title
-                    th Year 
-                    th 
-                    th
-            tbody 
-                tr 
-                    td 1
-                    td Iron Man
-                    td 2008
-                    td  
-                        a(href="/movie/delete/1") delete 
-                    td 
-                        a(href="/movie/form/1") edit
-        a(href="/movie/form") new
+//- doctype html
+//- html
+//-   head
+//-     meta(charset="UTF-8")
+//-     title Movie list
+//-     link(rel="stylesheet", href="./style.css")
+//-   body
+include ./base.pug
+block content
+    table
+        thead
+            tr
+                th ID
+                th Title
+                th Year
+                th
+                th
+        tbody
+            each movie in movies
+                tr
+                    td= movie.id
+                    td= movie.title
+                    td= movie.year
+                    td
+                        a(href="/movies/delete/" + movie.id) delete
+                    td
+                        a(href="/movies/form/" + movie.id) edit
+    include ./CreateNew.pug
+
+
+
 
 
 //- html
