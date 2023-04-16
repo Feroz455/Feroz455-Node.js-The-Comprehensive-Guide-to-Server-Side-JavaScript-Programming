@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Movie list
+    link(rel="stylesheet", href="/style.css")
+  body
+    form(action="/movies/save", method="post")
+      input(type="hidden", id="id", name="id", value=movie.id)
+      div
+        label(for="title") Titel:
+        input(type="text", id="title", name="title", value=movie.title)
+      div
+        label(for="year") Year:
+        input(type="text", id="year", name="year", value=movie.year)
+      div
+        button(type="submit") save
